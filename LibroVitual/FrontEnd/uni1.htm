@@ -1,0 +1,148 @@
+<html>
+<meta http-equiv="AUTHOR" content="jvaamond@fresno.pntic.mec.es y crisdiaz@telecable.es">
+<title>Test generado con GenerTest</title>
+<link rel="stylesheet"  href="../CSS/estilo.css"/>
+<head>
+<SCRIPT LANGUAGE="JavaScript"> 
+<!--
+var alfab="abcdefghijklmnñopqrstuvxyz"
+var nump=10
+var nrp=4
+function corrixe(){
+var acertos=0
+var sol=""
+fiestrar=open("","novar","width=300,height=350,scrollbars")
+fiestrar.document.write("<table border='0' width='100%' cellspacing='0' cellpadding='4' bgcolor='#FFFFF2'><tr><td><p align='center'>")
+for(i=1;i<=nump;i++){var senresp=true 
+	for(j=1;j<=nrp;j++){
+		if(eval("document.test.resp"+i+"["+(j-1)+"].checked")==true){
+			sol+=alfab.substring(j-1,j);senresp=false;break
+		}
+}
+if(senresp==true){sol+="-"}
+}
+var tempo= new Date()
+fiestrar.document.write("<br>Hora: "+tempo.getHours()+":"+tempo.getMinutes())
+fiestrar.document.write("<br>Fecha: "+tempo.getDate()+"/"+eval(tempo.getMonth()+1)+"/"+tempo.getYear())
+fiestrar.document.write("<p align='center'><table>")
+fiestrar.document.write("<tr><td colspan='4' align='center'><font size='5'>Resultados del test</font><p></td></tr>")
+fiestrar.document.write("<tr><td width='33' bgcolor='#FFF4F4'>"+
+"<p align='center'>Preg</td><td width='35' bgcolor='#FFF4F4' align='center'>"+
+"Solu</td><td width='35' bgcolor='#FFF4F4' align='center'>Resp</td>"+
+"<td width='35' bgcolor='#FFF4F4'><p align='center'>Resul</td></tr>")
+for(i=1;i<=sol.length;i++){
+	resposta=document.test.tras.value.substring(i-1,i)
+	solucion=sol.substring(i-1,i)	
+	if(resposta==solucion){
+	acertos+=1
+	fiestrar.document.write("<tr><td align='center'>"+i+
+	"</td><td align='center'>"+resposta+"</td><td align='center'>"+solucion+
+	"</td><td align='center'><font color='#009933'>acierto</font></td></tr>")
+	}
+	else{
+	fiestrar.document.write("<tr><td align='center'>"+i+"</td><td align='center'>"+resposta+
+	"</td><td align='center'>"+solucion+"</td><td align='center'><font color='#FF0000'>fallo</font></td></tr>")
+	}
+}
+nota=10/nump*acertos;
+if(Math.floor(nota)!=Math.ceil(nota)){cadea=""+nota;for(var i=0;i<=cadea.length;i++){
+if(cadea.charAt(i)=="."){nota=cadea.substring(0,i+3);break;}}}
+fiestrar.document.write("<tr><td colspan='4' align='center'>Aciertos: "+acertos+" de "+nump+"</td></tr>")
+fiestrar.document.write("<tr><td colspan='4' align='center'>Nota: "+nota+"</td></tr>")
+fiestrar.document.write("</td></tr><tr><td colspan='4' align='center'><p><form><input type='button' value='Cerrar' name='pecharf' onClick='window.close()' style='background-color: #FFCC66'></form></td></tr></table></td></tr></table>")
+fiestrar.document.write("</table>")
+fiestrar.document.close()
+}
+// -->
+</SCRIPT></head>
+<body>
+<form name="test">
+<table width="100%"><tr><td align="center"><table>
+<tr>
+<td>
+<p align="center">Seleciona la respuesta correcta</td>
+</tr></table></td></tr><tr><td>
+<table><tr><td><font size="4" color="#FF00FF">1. </font></td><td bgcolor="#F2FFF2" width="100%">Serie de pasos organizados que describe el proceso que se debe seguir para dar solución a un problema especifico.</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>a) </td><td><input type="radio" name="resp1"></td><td>Pseudocódigo</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>b) </td><td><input type="radio" name="resp1"></td><td>Algoritmo
+</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>c) </td><td><input type="radio" name="resp1"></td><td>Diagrama de flujo
+</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>d) </td><td><input type="radio" name="resp1"></td><td>Proceso
+</td></tr></table>
+<table><tr><td><font size="4" color="#FF00FF">2. </font></td><td bgcolor="#F2FFF2" width="100%">
+Es un dato que puede cambiar durante la ejecución de un programa.
+</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>a) </td><td><input type="radio" name="resp2"></td><td>Constante</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>b) </td><td><input type="radio" name="resp2"></td><td>Variable
+</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>c) </td><td><input type="radio" name="resp2"></td><td>Identificador
+</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>d) </td><td><input type="radio" name="resp2"></td><td>Salida
+</td></tr></table>
+<table><tr><td><font size="4" color="#FF00FF">3. </font></td><td bgcolor="#F2FFF2" width="100%">Todas son características de un algoritmo, excepto:</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>a) </td><td><input type="radio" name="resp3"></td><td>Preciso</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>b) </td><td><input type="radio" name="resp3"></td><td>Definido
+</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>c) </td><td><input type="radio" name="resp3"></td><td>Finitivo
+</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>d) </td><td><input type="radio" name="resp3"></td><td>Aleatorio
+</td></tr></table>
+<table><tr><td><font size="4" color="#FF00FF">4. </font></td><td bgcolor="#F2FFF2" width="100%">En esta etapa del análisis E-P-S se realizan las operaciones o cálculos necesarios para encontrar la solución al problema.</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>a) </td><td><input type="radio" name="resp4"></td><td>Entrada</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>b) </td><td><input type="radio" name="resp4"></td><td>Proceso
+</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>c) </td><td><input type="radio" name="resp4"></td><td>Salida
+</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>d) </td><td><input type="radio" name="resp4"></td><td>Ninguna de las anteriores
+</td></tr></table>
+<table><tr><td><font size="4" color="#FF00FF">5. </font></td><td bgcolor="#F2FFF2" width="100%">En esta etapa del análisis E-P-S se obtienen los resultados finales de los cálculos o operaciones realizadas.</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>a) </td><td><input type="radio" name="resp5"></td><td>Entrada</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>b) </td><td><input type="radio" name="resp5"></td><td>Proceso
+</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>c) </td><td><input type="radio" name="resp5"></td><td>Salida
+</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>d) </td><td><input type="radio" name="resp5"></td><td>Ninguna de las anteriores
+</td></tr></table>
+<table><tr><td><font size="4" color="#FF00FF">6. </font></td><td bgcolor="#F2FFF2" width="100%">Es un dato que no cambia durante la ejecución de un programa.</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>a) </td><td><input type="radio" name="resp6"></td><td>Constante</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>b) </td><td><input type="radio" name="resp6"></td><td>Variable
+</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>c) </td><td><input type="radio" name="resp6"></td><td>Identificador
+</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>d) </td><td><input type="radio" name="resp6"></td><td>Salida
+</td></tr></table>
+<table><tr><td><font size="4" color="#FF00FF">7. </font></td><td bgcolor="#F2FFF2" width="100%">Es la representación gráfica de un algoritmo</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>a) </td><td><input type="radio" name="resp7"></td><td>Pseudocódigo</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>b) </td><td><input type="radio" name="resp7"></td><td>Algoritmo
+</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>c) </td><td><input type="radio" name="resp7"></td><td>Diagrama de flujo
+</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>d) </td><td><input type="radio" name="resp7"></td><td>Proceso
+</td></tr></table>
+<table><tr><td><font size="4" color="#FF00FF">8. </font></td><td bgcolor="#F2FFF2" width="100%">En el análisis E-P-S es la información necesaria para la solución de un problema</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>a) </td><td><input type="radio" name="resp8"></td><td>Datos de Entrada</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>b) </td><td><input type="radio" name="resp8"></td><td>Proceso
+</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>c) </td><td><input type="radio" name="resp8"></td><td>Salida
+</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>d) </td><td><input type="radio" name="resp8"></td><td>Ninguna de las anteriores
+</td></tr></table>
+<table><tr><td><font size="4" color="#FF00FF">9. </font></td><td bgcolor="#F2FFF2" width="100%">Mezcla de lenguaje de programación y lenguaje natural y es otra representación del algoritmo.</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>a) </td><td><input type="radio" name="resp9"></td><td>Pseudocódigo</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>b) </td><td><input type="radio" name="resp9"></td><td>Algoritmo</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>c) </td><td><input type="radio" name="resp9"></td><td>Diagrama de flujo</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>d) </td><td><input type="radio" name="resp9"></td><td>Proceso</td></tr></table>
+<table><tr><td><font size="4" color="#FF00FF">10. </font></td><td bgcolor="#F2FFF2" width="100%">Todos son elementos del análisis E-P-S Excepto:</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>a) </td><td><input type="radio" name="resp10"></td><td>Datos de entrada</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>b) </td><td><input type="radio" name="resp10"></td><td>Definición
+</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>c) </td><td><input type="radio" name="resp10"></td><td>Proceso</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>d) </td><td><input type="radio" name="resp10"></td><td>Salida </td></tr></table>
+</td></tr>
+<tr><td align="center" height="50"><input type="hidden" value="bbdbcacaab" name="tras">
+<input type="button" value="Puntuación" name="resultados" onClick="corrixe()" style="background-color: #FFCC66">
+<input type="reset" value="Limpiar" name="limpar" style="background-color: #FFCC66"></td></tr>
+</td></tr></table></form>
+</body>
+</html>

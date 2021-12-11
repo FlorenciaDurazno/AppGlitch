@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<title>Metodologia de la Programacion</title>
+<link rel="stylesheet"  href="../CSS/estilo1.css"/>
+
+<style>
+body {
+    font-family: "Segoe UI", sans-serif;
+    font-size:100%;
+    margin:0;
+    padding:0;
+}
+
+header {
+    background:#333;
+    color:#eee;
+    width:100%;
+}
+
+input#abrir-cerrar {
+    visibility:hidden;
+    position: absolute;
+    top: -9999px;
+}
+
+
+label[for="abrir-cerrar"] {
+    cursor:pointer;
+    padding: 0rem;
+    background-color:#333333;
+    color:#CCFFFF;
+    display:inline-block;
+    width:100%;
+    position: fixed;
+
+}
+
+.cerrar {
+    display:none;
+}
+
+#mennu {
+    width:0;
+}
+
+#contenido {
+    margin-left:0;
+}
+
+input#abrir-cerrar:checked ~ #mennu {
+    width:300px;
+}
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"], input#abrir-cerrar:checked ~ #contenido {
+    margin-left:300px;
+    transition: margin-left .4s;
+}
+
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"] .cerrar {
+    display:inline;
+}
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"] .abrir {
+    display:none;
+}
+
+.mennu {
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #00324b;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding: 1rem 0;
+    box-sizing:border-box;
+}
+
+.mennu .boton-cerrar {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+    display: block;
+    padding: 0;
+    line-height: 1.5rem;
+    margin: 0;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.mennu ul, .mennu li{
+    margin:0;
+    padding:0;
+    list-style:none inside;
+}
+
+.mennu ul {
+    margin: 4rem auto;
+    display: block;
+    width: 80%;
+    min-width:200px;
+}
+
+.mennu a {
+    display: block;
+    font-size: 120%;
+    color: #eee;
+    text-decoration: none;
+    
+}
+
+.mennu a:hover{
+    color:#fff;
+    background-color: #f90;
+
+}
+
+h1 {
+    color:#000033;
+    font-size:30pt;
+    font-weight:normal;
+    font-family: arial;
+}
+#contenido {
+    transition: margin-left .4s;
+    padding: 1rem;
+}
+
+.abrir-cerrar {
+    color: #2E88C7;
+    font-size:1rem;   
+}
+
+------SUBMENU-------
+
+
+</style>
+
+
+</head>
+
+
+<body>
+ <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
+    <label for="abrir-cerrar">&#9776; <img src="../CSS/header.jpg" width="1295px" height="140px"><span class="abrir"></span><span class="cerrar"></span></label>
+    <div id="mennu" class="mennu">
+
+        <ul class="menu acordion">
+            <li><a href="../index.html">INICIO</a></li><br><BR>
+            <li><a href="Temario.pdf">TEMARIO</a></li><br><BR>
+
+                     <!--SUBMENU-->
+          
+           <span class="plus">
+            <li><a class="submenu" href="">UNIDADES</a><BR>
+               <li><a href="unidad1.html">Unidad I. Conceptos básicos </a></li>        
+               <li><a href="unidad2.html">Unidad II. Expresiones</a> </li>
+               <li><a href="unidad3.html">Unidad III. Algoritmos y diagramas de flujo</a></li>
+               <br>
+         <li><a class="submenu" href="">PRACTICAS</a><BR>
+               <li><a href="EjerUni1.html">Unidad I. Conceptos básicos</a></li>        
+               <li><a href="EjerUni2.html">Unidad II. Expresiones</a> </li>
+               <li><a href="EjerUni3.html">Unidad III. Algoritmos y diagramas de flujo</a></li>
+               <br>
+         <li><a class="submenu" href="">CUESTIONARIOS</a><BR>
+               <li><a href="eva1.html">Unidad I. Conceptos básicos</a></li>        
+               <li><a href="eva2.html">Unidad II. Expresiones</a> </li>
+               <li><a href="eva3.html">Unidad III. Algotirmos y diagramas de flujo</a></li>
+
+        </ul>
+    </div>
+    <div id="contenido" >
+             </div>
+
+
+
+	
+	<div id="uni1">
+	      <BR>
+        <p></p>
+        <br>
+        <BR>
+        <p></p>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <br>
+
+        <center><h2>PRACTICAS</h2></center>
+      <h3>Etructura secuencial</h3>
+        <p>Se requiere obtener el área de un circunferencia. Realizar el algoritmo correspondiente y 
+        representarlo mediante un diagrama de flujo y pseudocódigo correspondiente.Si se analiza la fórmula que se utiliza para tal fin, se puede establecer que se reuiere un valor de radio solamente y que se debe dar un valor constante, que es el valor de PI, que se establece como 3.1416. con esto se pude establecer la siguiente tabla con las variables correspondientes.</p>
+        <center><img src="../imagenes/Ejer1.png"></center>
+        <p><i>Variables utilizadas para determinar el área de una circunferencia</i></p>
+      <br>
+
+        <center><p>A partir de esto se obtendría el diagrama de flujo, que muestra el algoritmo correspondiente para la solución del problema.</p></center>
+        <center><img src="../imagenes/Secuencial.png"/ width="400px" height="374px"></center>
+        <br>
+
+        <p>Ahora de igual forma puede establecer la representación mediante el pseudocódigo.</p>
+        <center><img src="../imagenes/secuenciall.png"/ width="300px" height="264px"></center>
+        <HR>
+        <br>
+
+        <h3>Etructura seleccion compuesta</h3>
+
+        <p><b>Ejemplo 1:</b></p>
+        <p>Realice un algoritmo para determinar si un número es positivo o negativo. Para este caso, muestra las varibles que se requieren en la solución del problema.</p>
+        <center><img src="../imagenes/ejer02.png"> </center>
+      <br>
+
+        <center><p>El diagrama de flujo muestra el algoritmo que permite obtener la solución del problema.</p></center>
+        <center><img src="../imagenes/Seleccion_Compuesta.png" width="400px" height="374px"></center>
+        <br>
+
+        <center><p>Mediante el pseudocódigo represente el algoritmo que permite determinar si el numero que se proporciona es positivo o negativo.</p></center>
+        <center><img src="../imagenes/compuesta.png" ></center>
+        <br>
+
+        <p><b>Ejemplo 2:</b></p>
+        <p>Realice un algoritmo para determinar cuánto se debe pagar por equis cantidad de lápices considerando que si son 1000 o más el costo es de 85₵; de lo contrario, el precio es de 90₵.Por consiguiente la tabla, muestra las variables que se utilizan en la solución del problema.</p>
+        <center><img src="../imagenes/ejer2.png" ></center>
+        <br>
+
+        <p>Ahora el algoritmo correspondiente se puede representar de la forma mostrada en el diagrama de flujo, el cual permite obtener el pago que se va a realizar por la compra de la cantidad de equis de lápices, donde se puede resumir que si son más de mil , el número de lapíz se multiplica por 0.85, de lo contrario, el producto se efectúa por 0.90, con el cual se obtiene el resultado que se busca.</p>
+        <center><img src="../imagenes/Seleccion_Compuesta2.png"></center>
+        <br>
+
+        <center><p>El pseudocódigo muestra el algoritmo correspondiente para determinar cuánto se debe pagar.</p></center>
+        <center> <img src="../imagenes/compuesta2.png"> </center> <!--CODIGO-->
+        <HR>
+         <BR>
+
+        <h3>Selección anidado</h3>
+        <p><b>Ejemplo 1:</b></p>
+        <p>Se requiere determinar cuál de tres cantidades proporcionadas es la mayor. Las variables que intervienen en la solución  de este problema se muestra en la siguiente tabla.</p>
+        <center><img src="../imagenes/ejer3.png"></center>
+        <br>
+
+        <center><p>El diagrama de flujo muestra la estructura del algoritmo correspondiente para la solución de este problema.</p></center>
+        <center><img src="../imagenes/Seleccion_Anidado.png"></center>
+        <br>
+
+        <center><p>El pseudocódigo presenta el algoritmo correspondiente mediante la utilización de esta herramienta.</p></center>
+        <center><img src="../imagenes/anidado.png"> </center> <!--CODIGO-->
+        <br>
+
+        <p><b>Ejemplp 2:</b></p>
+        <p>"La langosta ahumada" es una empresa dedicada a ofrecer banquetes; sus tarifas son las siguientes: el costo del platillo por persona es de $95.00, pero si el número de personas es mayor a 200 pero menor o igual a 300, el costo es de $85.00. Para más de 300 personas el costo por platillo es de $75.00. Se requiere un algoritmo que ayude a determinar el presupuesto que se debe presentar a los clientes que deseen realizar un evento. Aquí la tabla muestra las variables que se utilizarán para la solución del problema.</p>
+        <center><img src="../imagenes/ejer03.png"></center>
+        <br>
+
+        <center><p>Diagrama de flujo</p></center>
+        <center><img src="../imagenes/Seleccion_Anidado2.png"></center>
+        <br>
+        
+        <center><p>Pseudocódigo</p></center>
+        <center><img src="../imagenes/anidado2.png"> </center> <!--CODIGO-->
+        <HR>
+        <BR>
+
+        <h3> Selección Switch</h3>
+        <p><b>Ejemplo 1:</b></p>
+        <p>Una companía de paqueteria internacional tiene servicios en algunos países de Ámerica del Norte, Ámerica Central, Ámerica del sur, Europa y Asia. el costo por el servicio de paquetería se basa en el peso del paquete y la zona a la que va dirigido. Lo anterior se muestra en la tabla siguiente.</p>
+        <center><img src="../imagenes/ejer4.png"></center>
+        <p><i>Tabla de costos para el servicio de paquetería con base a la zona y el peso.</i></p>
+        <br>
+        <center><img src="../imagenes/ejer44.png"></center>
+        <p><i>Tabla de variables utilizadas para determinar el servicio de paquetería.</i></p>
+        <br>
+
+        <p>El diagrama de flujo representa el algoritmo corrrepondiente para obtener el costo que tendrá enviar el paquete a una zona determinada considerando que si no es el del 1 al 4, es el 5. Pero de igual forma se puede considerar zona no válida.</p>
+        <center><img src="../imagenes/Seleccion_Switch.png"></center>
+        <br>
+
+       <center> <p>El pseudocódigo representa la forma de escribir el algoritmo que corresponde a la solución del problema.</p></center>
+       <center><img src="../imagenes/switch.png"></center>
+       <br>
+
+       <p><b>Ejemplo 2:</b></p>
+       <p>El banco "Pueblo desconocido" ha decidido aumentar el límite de crédito de la tarjetas de crédito de sus clientes, para esto considera que si su cliente tiene tarjeta tipo 1, el aumento séra de 25%, si tiene tipo 2, séra de 35%, si tiene tipo 3, de 40%, y para cualquier otro tipo, de 50%. Ahora bien, si la persona cuenta con más de una tarjeta, sólo se considera la de tipo mayor o la que el cliente indique. Realice un algoritmo y represente su diagrama de flujo y el pseudocódigo para determinar el nuevo límite de crédito que tendrá una persona en su tarjeta.</p>
+       <center><img src="../imagenes/ejer04.png"></center><br>
+
+       <center><p>Diagrama de flujo que presenta la solución del problema.</p></center>
+       <center><img src="../imagenes/Seleccion_Switch2.png"></center>
+       <br>
+
+       <center><p>Pseudocódigo</p></center>
+       <CENTER><img src="../imagenes/switch2.png"></CENTER><!--CODIGO-->
+       <HR>
+       <BR>
+
+       <h3>FOR (DESDE-PARA)</h3>
+       <p><b>Ejemplo 1:</b></p>
+       <p>Se requiere un algoritmo para obtener la suma de diez cantidades mediante la utilización de un ciclo Desde. El ciclo Desde también es conocido como ciclo For en los diferentes lenguajes de programación. Se utilizara las variables que se muestran en la siguiente tabla.</p>
+       <center><img src="../imagenes/ejer55.png"></center>
+       <br>
+
+       <center><p>El diagrama de flujo muestra la solución correspondiente utilizando el ciclo Desde.</p></center>
+       <center><img src="../imagenes/For.png"></center>
+       <br>
+
+       <center><p>El pseudocódigo representa el algoritmo correspondiente de la solución de este problema.</p></center>
+       <center><img src="../imagenes/ford.png" width="356" height="234"></center>
+       <br>
+
+       <p><b>Ejemplo 2:</b></p>
+       <p>Se requiere un algoritmo para obtener la edad promedio de un grupo de N alumnos. La siguiente tabla muestra las variables que se van  a utilizar para la solución del problema.</p>
+       <center><img src="../imagenes/ejer05.png"></center>
+       <br>
+
+       <p>El diagrama de flujo muestra el algoritmo de solución.</p>
+       <center><img src="../imagenes/For2.png"></center><br>
+
+       <p>Pseudocódigo muestra el algoritmo para obtenerla edad promedio de N alumnos.</p>
+       <center><img src="../imagenes/forr2.png"></center>
+       <HR>
+       <BR>
+
+       <h3>While(Mientras)</h3>
+       <p>Ejemplo 1:</p>
+       <p>Se requiere un algoritmo para obtener la estatura promedio de un gruo de personas, cuyo número de miembros se desconoce, el ciclo debe efectuarse siempre y cuando se tenga una estatura registrada. La tabla muestra las variables que se van a utilizar para la solución de este problema.</p>
+       <center><img src="../imagenes/ejer6.png"></center>
+       <br>
+
+       <center><p>El diagrama de flujo muestra la representación del algoritmo.</p></center>
+       <center><img src="../imagenes/While.png"></center>
+       <br>
+
+       <center><p>El pseudicódigo muestra la representación del algoritmo.</p></center>
+       <center><img src="../imagenes/whilee.png"></center>
+       <br>
+
+       <p><b>Ejemplo 2:</b></p>
+       <p>Se requiere un algoritmo para determinar cuanto ahorrará una persona en un año, si al final de cada mes deposita variables cantidades de dinero; además, se requiere saber cuánto lleva ahorrando cada mes. La tabla muestra las variables que se requieren para plantear la solución del problema.</p>
+       <center><img src="../imagenes/ejer06.png"></center>
+       <br>
+
+       <center><p>EL diagrama de flujo muestra el algoritmo para la solución del problema.</p></center>
+       <center><img src="../imagenes/While2.png"></center>
+       <br>
+
+       <center><p>El pseudocódigo representa el algoritmo para la solución del problema.</p></center>
+       <center><img src="../imagenes/whilee2.png"></center>
+       <BR>
+       <HR>
+
+        <h3>Do While (Hacer-Mientras)</h3>
+       <p>Ejemplo 1:</p>
+       <p>Se requiere un algoritmo para obtener la estatura promedio de un gruo de personas, cuyo número de miembros se desconoce, el ciclo debe efectuarse siempre y cuando se tenga una estatura registrada. La tabla muestra las variables que se van a utilizar para la solución de este problema.</p>
+       <center><img src="../imagenes/ejer6.png"></center>
+       <br>
+
+       <center><p>El diagrama de flujo muestra la representación del algoritmo.</p></center>
+       <center><img src="../imagenes/Do-While.png"></center>
+       <br>
+
+       <center><p>El pseudicódigo muestra la representación del algoritmo.</p></center>
+       <center><img src="../imagenes/dowhile.png"></center>
+       <br>
+
+       <p><b>Ejemplo 2:</b></p>
+       <p>Se requiere un algoritmo para determinar cuanto ahorrará una persona en un año, si al final de cada mes deposita variables cantidades de dinero; además, se requiere saber cuánto lleva ahorrando cada mes. La tabla muestra las variables que se requieren para plantear la solución del problema.</p>
+       <center><img src="../imagenes/ejer06.png"></center>
+       <br>
+
+       <center><p>EL diagrama de flujo muestra el algoritmo para la solución del problema.</p></center>
+       <center><img src="../imagenes/Do-While2.png"></center>
+       <br>
+
+       <center><p>El pseudocódigo representa el algoritmo para la solución del problema.</p></center>
+       <center><img src="../imagenes/dowhile2.png"></center>
+       
+        
+    </div>
+</body>
+</html>

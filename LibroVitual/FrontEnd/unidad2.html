@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<title>Unidad II</title>
+<link rel="stylesheet"  href="../CSS/estilo1.css"/>
+
+<style>
+body {
+    font-family: "Segoe UI", sans-serif;
+    font-size:100%;
+    margin:0;
+    padding:0;
+}
+
+header {
+    background:#333;
+    color:#eee;
+    width:100%;
+}
+
+input#abrir-cerrar {
+    visibility:hidden;
+    position: absolute;
+    top: -9999px;
+}
+
+
+label[for="abrir-cerrar"] {
+    cursor:pointer;
+    padding: 0rem;
+    background-color:#333333;
+    color:#CCFFFF;
+    display:inline-block;
+    width:100%;
+    position: fixed;
+
+}
+
+.cerrar {
+    display:none;
+}
+
+#mennu {
+    width:0;
+}
+
+#contenido {
+    margin-left:0;
+}
+
+input#abrir-cerrar:checked ~ #mennu {
+    width:300px;
+}
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"], input#abrir-cerrar:checked ~ #contenido {
+    margin-left:300px;
+    transition: margin-left .4s;
+}
+
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"] .cerrar {
+    display:inline;
+}
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"] .abrir {
+    display:none;
+}
+
+.mennu {
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #00324b;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding: 1rem 0;
+    box-sizing:border-box;
+}
+
+.mennu .boton-cerrar {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+    display: block;
+    padding: 0;
+    line-height: 1.5rem;
+    margin: 0;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.mennu ul, .mennu li{
+    margin:0;
+    padding:0;
+    list-style:none inside;
+}
+
+.mennu ul {
+    margin: 4rem auto;
+    display: block;
+    width: 80%;
+    min-width:200px;
+}
+
+.mennu a {
+    display: block;
+    font-size: 120%;
+    color: #eee;
+    text-decoration: none;
+    
+}
+
+.mennu a:hover{
+    color:#fff;
+    background-color: #f90;
+
+}
+
+h1 {
+    color:#000033;
+    font-size:30pt;
+    font-weight:normal;
+    font-family: arial;
+}
+#contenido {
+    transition: margin-left .4s;
+    padding: 1rem;
+}
+
+.abrir-cerrar {
+    color: #2E88C7;
+    font-size:1rem;   
+}
+
+------SUBMENU-------
+</style>
+
+
+</head>
+
+
+<body>
+    <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
+    <label for="abrir-cerrar">&#9776; <img src="../CSS/header.jpg" width="1295px" height="140px"><span class="abrir"></span><span class="cerrar"></span></label>
+    <div id="mennu" class="mennu">
+        <ul class="menu acordion">
+            <li><a href="../index.html">INICIO</a></li><br><BR>
+            <li><a href="Temario.pdf">TEMARIO</a></li><br><BR>
+
+                     <!--SUBMENU-->
+          
+           <span class="plus">
+            <li><a class="submenu" href="">UNIDADES</a><BR>
+               <li><a href="unidad1.html">Unidad I. Conceptos básicos </a></li>        
+               <li><a href="unidad2.html">Unidad II. Expresiones</a> </li>
+               <li><a href="unidad3.html">Unidad III. Algoritmos y diagramas de flujo</a></li>
+               <br>
+         <li><a class="submenu" href="">PRACTICAS</a><BR>
+               <li><a href="EjerUni1.html">Unidad I. Conceptos básicos</a></li>        
+               <li><a href="EjerUni2.html">Unidad II. Expresiones</a> </li>
+               <li><a href="EjerUni3.html">Unidad III. Algoritmos y diagramas de flujo</a></li>
+               <br>
+         <li><a class="submenu" href="">CUESTIONARIOS</a><BR>
+               <li><a href="eva1.html">Unidad I. Conceptos básicos</a></li>        
+               <li><a href="eva2.html">Unidad II. Expresiones</a> </li>
+               <li><a href="eva3.html">Unidad III. Algotirmos y diagramas de flujo</a></li>
+
+
+        </ul>
+    </div>
+    <div id="contenido" >
+             </div>
+
+    <div id="uni1">
+    	<BR>
+    	<br>
+        <BR>
+    	<p></p>
+    	<br>
+        <br>
+        <BR>
+        <BR>
+
+        <center><h2>Unidad Temática II  Expresiones</h2></center>
+        <br>
+
+        <p>Objetivo. El alumno convertirá expresiones algebraicas, aritméticas y lógicas a expresiones algorítmicas,  considerando la jerarquía de operadores, para realizar las tareas solicitadas.</p>
+        <br>
+
+    	<h3>2.1. Operadores aritméticos, relacionales y lógicos</h3>
+    	<br>
+    	<p>Operadores: Son elementos que relacionan de forma diferente, los valores de una o más variables y / o constantes. Es decir, los operadores nos permiten manipular valores.</p>
+    	<p>Un operador es una unidad de código que realiza una operación sobre uno o más elementos de código que devuelven valores. Tal operación puede ser una operación aritmética, como una suma o una multiplicación; una operación de concatenación, que combina dos cadenas en una nueva; una operación de comparación, que determina cuál de dos valores es mayor; una operación lógica, que evalúa si dos expresiones son ambas verdaderas. Los operadores combinados con elementos de código que devuelven valores como literales o variables forman expresiones o, en el caso del operador de asignación, instrucciones. Los operadores permiten manipular datos del mismo tipo.</p>
+    	<p>La clasificación de operadores se puede dividir en tres grande grupos: </p>
+    	<p><li>Aritméticos </li></p>
+        <p> <li>Relaciónales</li></p>
+        <p><li>Lógicos</li></p>
+
+        <p>Operadores Aritméticos</p>
+        <p>Los operadores aritméticos se utilizan para realizar muchas de las operaciones aritméticas habituales que implican el cálculo de valores numéricos representados por literales, variables, otras expresiones, llamadas a funciones y propiedades, y constantes.</p>
+        <p>Operadores Aritméticos: Los operadores aritméticos permiten la realización de operaciones matemáticas con los valores (variables y constantes). Los operadores aritméticos pueden ser utilizados con tipos de datos enteros o reales. Si ambos son enteros, el resultado es entero; si alguno de ellos es real, el resultado es real.</p>
+        <ul>
+            <p><b>Operadores Aritméticos</b></p>
+            <p><b>^ Exponente</b></p>
+            <p><b>+ Suma</b></p>
+            <p><b>- Resta</b></p>
+            <p><b>* Multiplicación</b></p>
+            <p><b>/ División</b></p>
+            <p><b>Mod Modulo (residuo de la división entera)</b></p>
+        </ul>
+
+        <p><u>Prioridad de los Operadores Aritméticos</u></p>
+        <ul>
+        	<p><li type="disc">Todas la expresiones entre parntesis se evalian primero.</li></p>
+        	<p><li>Las expresiones con paréntesis anidados se evalúan de dentro a forma.</li></p>
+        	<p><li>El paréntesis más interno se evalúa primero.</li></p>
+        	<p><li>Los operadores en una misma expresión con igual nivel de prioridad se evalúa de derecha a izquierda.</li></p>
+        	<p><li>Dentro de una misma expresión los operadores se evalúan en el siguiente orden:</li></p>
+        	<ol>
+        		<p><li value="1">^ Exponenciación</li></p>
+        		<p><li>*,/,mod Multiplicación, división, modulo</li></p>
+        		<p><li>+,- Suma y resta</li></p>
+        	</ol>
+        </ul>
+        <br>
+
+
+        <table>
+        	<tr>
+        	    <td><strong>Expresión</strong></td>
+        	    <td><strong>Resultado</strong></td> 
+        	</tr>
+
+        	<tr>
+        		<td>7/2</td>
+        		<td>3.5</td>
+        	</tr>
+
+        	<tr>
+        		<td>12 mod 7</td>
+        		<td>5</td>
+        	</tr>
+
+        	<tr>
+        		<td>4 + 2 * 5</td>
+        		<td>14</td>
+        	</tr>
+        </table> 
+        <br>
+
+        <p>Ejemplos:</p>
+        <p>4 + 2 * 5 = 14</p>
+        <p>23 * 2 / 5 = 9.2</p>
+        <p>46 / 5 = 9.2</p>
+        <p>3 + 5 * (10 - (2 + 4)) = 23</p>
+        <p>3 + 5 * (10 - 6) = 3 + 5 * 4 = 3 + 20 = 23</p>
+        <p>3.5 + 5.09 - 14.0 / 40 = 5.09</p>
+        <p>3.5 + 5.09 - 3.5 = 8.59 - 3.5 = 5.09</p>
+        <p>2.1 * (1.5 + 3.0 * 4.1) = 28.98</p>
+        <p>2.1 * (1.5 + 12.3) = 2.1 * 13.8 = 28.98</p>
+        <br>
+
+        <ul>
+            <p><li type="circle">Los operadores +, -, *, /, se pueden usar con operandos (constante, variable o expresión) tanto enteros como reales.</li></p> <br>
+            <p><li type="circle">La división de enteros da como resultado un entero.</li></p> 
+            <p><i>Ejemplo: 17/5=3</i></p><br>
+            <p><li type="circle">El operador módulo (mod) sólo puede ser utilizado con operandos enteros.</li></p><br>
+            <p><li type="circle">La expresión a mod b da como resultado el resto de la división entera de dos números a y b.</li></p>
+            <p><i>Ejemplos:</i></p> 
+            <p>17 mod 5=2</p>
+            <br>
+        </ul>
+
+        <p>Los operadores de una expresión aritmética deben satisfacer las siguientes reglas:</p>
+        <ul>
+        	<p><li type="disc">Si ambos números son de tipo entero entonces el resultado es de tipo entero.</li></p>
+        	<p><li>Si uno de los operandos o ambos operandos son de tipo real entonces el resultado es de tipo real.</li></p>
+        	<p><li>Si la expresión evaluada da como resultado un valor de tipo entero y la variable a la cual se le va a asignar este valor es de tipo real, entonces el resultado será convertido automáticamente al tipo real antes de realizar la asignación. </li></p>
+        	<p><li>Si la expresión evaluada da como resultado un valor de tipo real y la variable a la cual se le va a asignar este valor es de tipo entero, entonces el resultado será convertido automáticamente al tipo entero antes de realizar la asignación.</li></p>
+        	<p><li></li></p>
+        </ul>
+        <br>
+
+        <p><b>Operadores Relaciones</b></p>
+        <p>Los operadores relaciónales (de comparación) comparan dos expresiones y devuelven un valor Boolean que representa el resultado de la comparación. Los operadores se pueden utilizar para comparar valores numéricos, para comparar cadenas y para comparar objetos.</p>
+        <p>Una RELACIÓN consiste de dos operandos separados por un operador relacional. Si la relación es satisfecha, el resultado tendrá un valor booleano true ; si la relación no se satisface, el resultado tendrá un valor false. Los operandos deben ser del mismo tipo, aunque los valores de tipo real, integer y byte pueden combinarse como operandos en las relaciones.</p>
+        <p>Se utilizan para establecer una relación entre dos valores. Compara estos valores entre si y esta comparación produce un resultado de certeza o falsedad (verdadero o falso).</p>
+        <p>Los operadores relaciónales comparan valores del mismo tipo (numéricos o cadenas). Tienen el mismo nivel de prioridad en su evaluación. Los operadores relaciónales tiene menor prioridad que los aritméticos.</p>
+        <p><i>operadores Aritméticos</i></p>
+        <p>> Mayor que</p>
+        <p>< Menor que</p>
+        <p>>= Mayor o igual que</p>
+        <p><= Menor o igual que</p>
+        <p><> Diferente</p>
+        <p>=Igual</p>
+        <br>
+
+        <p><b>Operadores Lógicos</b></p>
+        <p>Al igual que las relaciones, en las operaciones con operadores lógicos se tienen resultados cuyo valor de verdad toma uno de los valores boléanos true o false.</p>
+        <p>Operadores Lógicos: Operan sobre operandos (constantes, variables, expresiones) de tipo lógico (cierto o falso) y evalúan a un valor de tipo lógico (cierto o falso). Estos operadores se utilizan para establecer relaciones entre valores lógicos. Estos valores pueden ser resultado de una expresión relacional.</p>
+   
+        <table>
+        	<tr>
+        		<td><strong>Operadores</strong></td>
+        		<td><strong>Lógicos</strong></td>
+        	</tr>
+
+
+        	<tr>
+        		<td>And</td>
+        		<td>Y</td>
+        	</tr>
+
+        	<tr>
+        		<td>Or</td>
+        		<td>O</td>
+        	</tr>
+
+        	<tr>
+        		<td>Not</td>
+        		<td>Negación</td>
+        	</tr>
+
+        </table>
+        <br>
+
+        <center><p>Tabla de verdad de Operadores Lógicos</p></center>
+        <center><img src="../imagenes/fig10.png" width="678px" height="335px"></center>
+        <p>Prioridad de operadores lógicos</p>
+        <p>Not</p>
+        <p>And</p>
+        <p>Or</p>
+        <br>
+
+        <h3>2.3 Expresiones</h3>
+        <ol>
+        	<p><li value="1">a * (b + c) + c * (d + e)</li></p>
+        	<p>R1=b+c</p>
+        	<p>R2=d+e</p>
+        	<p>R3=a*R1</p>
+        	<p>R4=c*R2</p>
+        	<p>R5=R3+R4(Resultado)</p>
+        	<br>
+
+        	<p><li>Evaluar la siguiente expresión aritmética</li></p>
+        	<p>a * (b + c) + c * (d + e)</p>
+            <p>para los valores:</p>
+            <p>a = 3, b = 2, c = 1, d = 8, e = 4</p>
+            <p>R1 = 2 + 1 = 3</p>
+            <p>R2 = 8 + 4 = 12</p>
+            <p>R3 = 3 * 3 = 9</p>
+            <p>R4 = 1 * 12 = 12</p>
+            <p>R5 = 9 + 12 = 21</p>
+            <br>
+
+            <p><li>(a * (b + c)) - 2 * a + (4 * d - f)</li></p>
+            <p>R1 = b + c</p>
+            <p>R2 = a * R1</p>
+            <p>R3 = 4 * d</p>
+            <p>R4 = R3 - f</p>
+            <p>R5 = 2 * a</p>
+            <p>R6 = R2 - R5</p>
+            <p>R7 = R6 + R4 (Resultado)</p>
+            <br>
+
+            <p><li>Evaluar la operación aritmética</li></p>
+            <p>(a * (b + c)) - 2 * a + (4 * d - f)</p>
+            <p>a = 3, b = 2, c = 1, d = 8, f = 4</p>
+            <p>R1 = 2 + 1 = 3</p>
+            <p>R2 = 3 * 3 = 9</p>
+            <p>R3 = 4 * 8 = 32</p>
+            <p>R4 = 32 - 4 = 28</p>
+            <p>R5 = 2 * 3 = 6</p>
+            <p>R6 = 9 - 6 = 3</p>
+            <p>R7 = 3 + 28 = 31</p>
+            <br>
+
+            <p><li> Si A = 4, B = 5 y C = 1, evaluar las siguientes expresiones</li></p>
+            <p>a) B * A - B * B / 4 * C</p>
+            <p>b) (A * B) / 3 * 3</p>
+            <p>c) (((B + C) / 2 * A + 10) * 3 * B) - 6</p>
+            <br>
+
+            <p><li>Evaluar la siguiente expresión para A=2 y B = 5</li></p>
+            <p>3 * A - 4 * B / A % 2</p>
+        </ol>
+    </div>
+
+</body>
+</html>

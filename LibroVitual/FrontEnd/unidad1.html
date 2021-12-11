@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<title>Unidad I</title>
+<link rel="stylesheet"  href="../CSS/estilo1.css"/>
+<style>
+body {
+    font-family: "Segoe UI", sans-serif;
+    font-size:100%;
+    margin:0;
+    padding:0;
+    padding-top: 0;
+
+}
+
+header {
+    background:#333;
+    color:#eee;
+    width:100%;
+}
+
+input#abrir-cerrar {
+    visibility:hidden;
+    position: absolute;
+    top: -9999px;
+}
+
+
+label[for="abrir-cerrar"] {
+    cursor:pointer;
+    padding: 0rem;
+    background-color:#333333;
+    color:#CCFFFF;
+    display:inline-block;
+    width:100%;
+    position: fixed;
+}
+
+.cerrar {
+    display:none;
+}
+
+#mennu {
+    width:0;
+}
+
+#contenido {
+    margin-left:0;
+}
+
+input#abrir-cerrar:checked ~ #mennu {
+    width:300px;
+}
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"], input#abrir-cerrar:checked ~ #contenido {
+    margin-left:300px;
+    transition: margin-left .4s;
+}
+
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"] .cerrar {
+    display:inline;
+}
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"] .abrir {
+    display:none;
+}
+
+.mennu {
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #00324b;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding: 1rem 0;
+    box-sizing:border-box;
+}
+
+.mennu .boton-cerrar {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+    display: block;
+    padding: 0;
+    line-height: 1.5rem;
+    margin: 0;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.mennu ul, .mennu li{
+    margin:0;
+    padding:0;
+    list-style:none inside;
+}
+
+.mennu ul {
+    margin: 4rem auto;
+    display: block;
+    width: 80%;
+    min-width:200px;
+}
+
+.mennu a {
+    display: block;
+    font-size: 120%;
+    color: #eee;
+    text-decoration: none;
+    
+}
+
+.mennu a:hover{
+    color:#fff;
+    background-color: #f90;
+
+}
+
+h1 {
+    color:#000033;
+    font-size:30pt;
+    font-weight:normal;
+    font-family: arial;
+}
+#contenido {
+    transition: margin-left .4s;
+    padding: 1rem;
+}
+
+.abrir-cerrar {
+    color: #2E88C7;
+    font-size:1rem;   
+}
+
+------SUBMENU-------
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+    <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
+    <label for="abrir-cerrar">&#9776; <img src="../CSS/header.jpg" width="1295px" height="140px"><span class="abrir"></span><span class="cerrar"></span></label>
+    <div id="mennu" class="mennu">
+
+        <ul class="menu acordion">
+            <li><a href="../index.html">INICIO</a></li><br><BR>
+            <li><a href="Temario.pdf">TEMARIO</a></li>
+                <br>
+                <BR>
+                     <!--SUBMENU-->
+          
+           <span class="plus">
+            <li><a class="submenu" href="">UNIDADES</a><BR>
+               <li><a href="unidad1.html">Unidad I. Conceptos básicos </a></li>        
+               <li><a href="unidad2.html">Unidad II. Expresiones</a> </li>
+               <li><a href="unidad3.html">Unidad III. Algoritmos y diagramas de flujo</a></li>
+               <br>
+         <li><a class="submenu" href="">PRACTICAS</a><BR>
+               <li><a href="EjerUni1.html">Unidad I. Conceptos básicos</a></li>        
+               <li><a href="EjerUni2.html">Unidad II. Expresiones</a> </li>
+               <li><a href="EjerUni3.html">Unidad III. Algoritmos y diagramas de flujo</a></li>
+               <br>
+         <li><a class="submenu" href="">CUESTIONARIOS</a><BR>
+               <li><a href="eva1.html">Unidad I. Conceptos básicos</a></li>        
+               <li><a href="eva2.html">Unidad II. Expresiones</a> </li>
+               <li><a href="eva3.html">Unidad III. Algotirmos y diagramas de flujo</a></li>
+
+
+        </ul>
+    </div>
+    <div id="contenido" >
+             </div>
+
+	
+	<div id="uni1">
+	   <BR>
+  	    <p></p>
+	    <br>
+        <BR>
+        <BR>
+        <BR>
+	    <BR>
+        <BR>
+	    
+
+        <center><h2>Unidad Temática I. Conceptos básicos</h2></center>
+
+        <p>Objetivo: El alumno determinará las entradas, procesos y salidas de un problema, utilizando los elementos básicos de programación, para el planteamiento de una solución.</p>
+        <br>
+
+        <h3>1.1. Adquisición, procesamiento y almacenamiento de datos</h3>
+        <p>Para resolver problemas es recomendable utilizar el análisis E-P-S, el cual consiste en lo siguiente:</p>
+        <br>
+
+	    <p>- Especificaciones de entrada: Información necesaria</p>
+        <p>Para la solución del problema.</p>
+        <p>¿Qué datos son de entrada?</p>
+        <p>¿Cuántos datos se introducirán</p> 
+        <p>¿Cuáles datos de entrada son válidos?</p>
+        <br>
+        <p>- Proceso: Operaciones o cálculos necesarios para encontrar la solución del problema.</p>
+        <p>¿Qué tipo de ecuaciones?</p>
+        <p>¿Cuántas ecuaciones?</p>
+        <p>¿Qué transformaciones sobre la data?</p>
+	    <br>
+        <p>Especificaciones de salida: Resultados finales de los cálculos.</p>
+        <p>¿Cuáles son los datos de salida?</p>
+        <p>¿Cuántos datos de salida se producirán?</p>
+        <p>¿Qué precisión tendrán los resultados?</p>
+        <p>¿Se debe imprimir un encabezado?</p>
+        <br> 
+
+        <center><img src="../imagenes/u1.png"/ width="400px" height="174px"></center>
+        <br>
+
+        <h3>1.2. Conceptos de Algoritmos, Pseudocódigo y Diagrama de Flujo</h3>
+
+        <p><b><i>Algoritmo:</i></b></p>
+
+        <p>La palabra algoritmo se deriva de la traducción al latín de la palabra árabe alkhowarizmi, nombre de un matemático y astrónomo árabe que escribiá un tratado sobre manipulación de números y ecuaciones en el siglo IX.</p>
+        <p><i>Un algoritmo es una serie de pasos organizados que describe el proceso que se debe seguir, para dar solución a un problema específico.</i></p>
+        <p>Las características de un buen algoritmo son:</p>
+
+        <ul>
+            <p><li type="disc">Debe tener un punto particular de inicio.</li></p>
+            <p><li>Debe ser definido, no debe permitir dobles interpretaciones.</li></p>
+            <p><li>Debe ser general, es decir, soportar la mayoría de las variantes que se puedan presentar en la definición del problema.</li></p>
+            <p><li>Debe ser finito en tamaño y tiempo de ejecución.</li></p>
+        </ul>
+
+        <p><i>Lenguajes algorítmicos:</i> Es una serie de símbolos y reglas que se utilizan para describir de manera explícita un proceso.</p>
+
+        <p><i>Tipos de lenguajes algorítmicos:</i></p>
+
+        <ul>
+            <p><li type="disc">Gráficos: Es la representación gráfica de las operaciones que realiza un algoritmo (diagrama de flujo).</li></p>
+            <p><li>No Gráficos: Representa en forma descriptiva las operaciones que debe realizar un algoritmo (pseudocódigo).</li></p>
+        </ul>
+        <p>Un ejemplo de un algoritmo simple, son las instrucciones que tienen los productos.</p>
+
+        <p><i><b>Pseudocódigo:</b></i></p>
+        <p><i>Mezcla de lenguaje de programación y español (o ingles o cualquier otro idioma) que se emplea, dentro de la programación estructurada, para realizar el diseño de un programa. En esencial, el pseudocódigo se puede definir como un lenguaje de especificaciones de algoritmos.</i></p>
+        <p>Es la representación narrativa de los pasos que debe seguir un algoritmo para dar solución a un problema determinado. El pseudocódigo utiliza palabras que indican el proceso a realizar.</p>
+
+        <p>Ventajas:</p>
+        <ul>
+            <p><li type="disc">Permite representar en forma fácil operaciones repetitivas complejas.</li></p>
+            <p><li >Es muy fácil pasar de pseudocádigo a un programa en algún lenguaje de programación. Si se siguen las reglas se puede observar claramente los niveles que tiene cada operación.</li></p>
+        </ul>
+
+        <p><i><b>Diagrama de flujo:</b></i></p>
+        <p><i>El diagrama de flujo es una la representación grafica del algoritmo, sobre este se plasman los pasos que se estipulan en el algoritmo.</i></p>
+        <br>
+
+        <h3>1.3. Tipos de datos (Numéricos, caracteres / cadenas, Booleanos)</h3>
+
+        <p>Dato: Expresión general que describe los objetos con los cuales opera una computadora.
+        Los datos a procesar en una computadora pueden clasificarse en:</p>
+        <ul>
+            <p><li type="disc">Simples</li></p>
+            <p><li type="disc">Estructurados</li></p>
+        </ul>
+
+        <p><i><b>Datos simples</b></i></p>
+        <ul>
+        <p><li type="disc"><u>Datos numéricos:</u> dentro de los tipos de datos numéricos encontramos los enteros y los reales. 
+        Los enteros son números que pueden estar precedidos del signo + o -, y que no tienen parte decimal.</li></p>
+        <p>Los reales son números que pueden estar precedidos del signo + o -, y que  tienen una parte decimal.</p>
+        <p><li><u>Datos alfanuméricos:</u>Dentro de este tipo encontramos los de tipo carácter (simple) y cadena de caracteres (estructurado). Son datos cuyo contenido pueden ser letras del abecedario (a, b, c...z), dígitos (0, 1,2...9) o símbolos especiales (#, $, %, &, etc.).</li></p>
+        <p>Un dato de tipo carácter contiene solo un carácter y se escribe entre apostrofes.Un dato tipo cadena de caracteres contiene un conjunto de caracteres y se escribe entre comillas.</p>
+        <p><li><u>Datos Lógicos:</u> dentro de este tipo encontramos los booleanos. Son datos que solo pueden tomar 2 valores: verdadero (true) o falso (false).</li></p>
+        </ul>
+        <br>
+
+        <h3>1.4.Identificadores, variables y constantes</h3>
+        <br>
+        <p><b><i>Identificadores</i></b></p>
+
+        <p>Son nombres usados para identificar a los objetos y demás elementos de un programa; variables, constantes, operadores, funciones, procedimientos, funciones, etc. Existen reglas para construir identificadores y son los siguientes:</p>
+
+        <ul>
+            <p><li type="disc">El primer carácter debe ser una letra o el carácter subrayado bajo.</li></p>
+            <p><li>Los caracteres siguientes deben ser letras, números o símbolos de subrayado bajo.</li></p>
+            <p><li>Las letras mayúsculas y las letras minúsculas se tratan como distintas. Así suma, Suma y SUMA son tres identificadores distintos.</li></p>
+            <p><li>No pueden ser iguales a palabras reservadas.</li></p>
+        </ul>
+
+        <p>Los nombres utilizados deben ser significativos y tener relación con el objeto que representan, como pueden ser los siguientes casos:</p>
+
+        <p>Nombre: representa nombres de las personas</p>
+        <p>Precios: representa precios de los artículos</p>
+        <p>Notas: representan las notas de una clase</p>
+        <br>
+        
+        <p><i><b>Constantes</b></i></p>
+        <p>Son datos que no cambian durante la ejecución de un programa. Para nombrar las constantes utilizamos los identificadores que se mencionaron anteriormente.</p>
+        <br>
+
+        <p><i><b>Variables</b></i></p>
+        <p>Son objetos que pueden cambiar su valor durante la ejecución de un programa. Para nombrar las constantes utilizamos los identificadores que se mencionaron anteriormente.</p>
+        <p>Comportamiento de las variables en la ejecución de un programa:</p>
+
+        <ol>
+        <p><li value="1">Se definen (declaración)</li></p>
+        <p><li>Se crean</li></p>
+        <p><li>Se cargan con un valor inicial (datos de entrada)</li></p>
+        <p><li>Su valor se modifica (programa)</li></p>
+        <p><li>Llega a un valor final (resultados de salida)</li></p>
+        </ol>
+        <br>
+
+        <p>Criterios a seguir con las variables:</p>
+        <ul>
+        	<p><li type="disc">Cuanto menos, mejor</li></p>
+        	<p><li>Cada una con su significado muy claro</li></p>
+        	<p><li>No olvidarse de darles un valor inicial</li></p>
+        	<p><li>Controlar y comprobar que van tomando valores sensatos</li></p>
+        	<p><li>Los lenguajes modernos obligan a declarar las variables antes de utilizarlas</li></p>
+        </ul>
+
+        <h3>1.5. Metodología para la solución de problemas por medio de computadoras</h3>
+
+        <p>Esta metodología en sus primeros tres puntos provee los elementos básicos para desarrollar u programa.</p>
+
+        <p><b>Definición del Problema</b></p>
+        <p>Esta fase está dada por el enunciado del problema, el cual requiere una definición clara y precisa. Tomar en cuenta que la solución del problema debe estar en función de lo que el problema requiera y no en función de lo que el programador quiera.
+        Es importante que se conozca lo que se desea que realice la computadora; mientras esto no se conozca del todo no tiene mucho caso continuar con la siguiente etapa.</p>
+
+        <p><b>Análisis del Problema</b></p>
+        <p>No existe un método general para la resolución de problemas, la resolución de un problema es un proceso creativo donde el conocimiento, la habilidad y la experiencia tiene un papel importante, el proceder de manera sistemática ayuda a resolver un problema.Hay muchas maneras de resolver y pueden existir muchas soluciones, se plantean algunos criterios o estrategias generales que se deben tomar en cuenta, las cuales son útiles en el análisis del problema.</p>
+        <ul>
+            <p><li type="disc">Usar toda la información útil (no superficial) disponible en el enunciado del problema.</li></p>
+            <p><li>Hacer explícita las reglas y datos que aparezcan implícitos (en muchos problemas numéricos se pueden utilizar reglas de la aritmética o álgebra).</li></p>
+            <p><li>Profundizar en el problema considerado (emplear algún tipo de notación).</li></p>
+            <p><li>Dividir el problema complejo en subproblemas más simples. que se pueden resolver independientemente y después combinar sus soluciones.</li></p>
+            <p><li>Otra forma de abordar el problema consiste en trabajar "hacia atrás" es decir parir de la solución e intentar llegar al estado inicial.</li></p>
+            <p><li>El propósito del análisis del problema es ayudar al programador para llegar a una cierta comprensión de la naturaleza del problema. Una buena definición del problema junto con una descripción detallada de las especificaciones de entrada y de salida, son los requisitos más importantes para llegar a una solución eficaz.</li></p>
+        </ul>
+        <center><img src="../imagenes/fig.png"/></center>
+        <br>
+
+        <p>Una vez que se ha comprendido lo que se desea de la computadora, es necesario definir:</p>
+        <ul>
+            <p><li type="disc">Los datos de entrada.</li></p>
+            <p><li>Cuál es la información que se desea producir (salida).</li></p>
+            <p><li>Los métodos y fórmulas que se necesitan para procesar los datos.</li></p>
+            <p><li>Una recomendación muy practica es el que nos pongamos en el lugar de la computadora y analicemos que es lo que necesitamos que nos ordenen y en que secuencia para producir los resultados esperados.</li></p>
+        </ul>
+        <p><i>Ejercicio.- Leer el radio de círculo y calcular e imprimir su superficie.</i></p>
+            <br>
+           
+        <p>Definición del problema.</p>
+        <p>Calcular la superficie de una circunferencia</p>
+        <br>
+
+        <p>Análisis del problema</p>
+        <p>La entrada a este problema es el radio de la circunferencia y de tipo real.</p>
+        <p>La salida de este problema es la superficie que también es de tipo real.</p>
+        <br>
+
+        <p><b>Diseño del Algoritmo.</b></p>
+        <p>Un computador no tiene capacidad para solucionar problemas más que cuando se le proporciona los sucesivos pasos a realizar. Estos pasos indican las instrucciones a ejecutar por la máquina y se denomina algoritmo.</p>
+
+        <p>Las características de un buen algoritmo son:</p>
+        <ul>
+            <p><li>Debe tener un punto particular de inicio.</li></p>
+            <p><li>Debe ser definido, no debe permitir dobles interpretaciones.</li></p>
+            <p><li>Debe ser general, es decir, soportar la mayoría de las variantes que se puedan presentar en la definición del problema.</li></p>
+            <p><li>Debe ser finito en tamaño y tiempo de ejecución.</li></p>
+        </ul>
+        <p>Se pueden utilizar cualquier técnica de diseño de algoritmos, diseño descendente, divide y vencerás.</p>
+        <p>Normalmente los pasos diseñados en un primer esbozo del algoritmo son incompletos e indican solo unos pocos pasos, tras esta primera descripción estos se amplían en una descripción más detallada con pasos específicos este proceso se denomina refinamiento del algoritmo.</p>
+        <br>
+
+        <p>Ejemplo: problema cálculo de la superficie de una circunferencia.</p>
+        <center><img src="../imagenes/fig1.png"/></center>
+        <br>
+
+        <p>En el diseño de un algoritmo tomamos en cuenta el siguiente desarrollo.</p>
+        <center><img src="../imagenes/fig2.png"/></center>
+        <br>
+
+        <p><b>Verificación del algoritmo </b></p>
+        <p>Una vez que se ha terminado de escribir un algoritmo es necesario comprobar que realiza las tareas para las que ha sido diseñado y produce el resultado correcto y esperado.
+        El modo más normal de comprobar un algoritmo es mediante la ejecución manual (prueba de escritorio), usando datos significativos que abarquen todo el posible rango de valores y anotando en una hoja de papel las modificaciones que se producen en las diferentes fases  hasta la obtención de los resultados.</p>
+
+        <p><b>Fases de Implementación</b></p>
+        <p>Una vez que el algoritmo está diseñado, representado gráficamente mediante una herramienta y verificado se debe pasar a la fase de codificación, traducir el algoritmo a un determinado lenguaje de programación que deberá ser completada con la ejecución y verificación de resultado en el computador.</p>
+
+        <p><b>Codificación</b></p>
+        <p>La codificación es la operacion de escribir la solución del problema (de acuerdo a la lógica del diagrama de flujo o pseudocódigo), en una serie de instrucciones detalladas, en un código reconocible por la computadora, la serie de instrucciones detalladas se le conoce como código fuente, el cual se escribe en un lenguaje de programación o lenguaje de alto nivel.</p>
+
+        <p><b>Prueba y Depuración</b></p>
+        <p>Los errores humanos dentro de la programación de computadoras son muchos y aumentan considerablemente con la complejidad del problema. El proceso de identificar y eliminar errores, para dar paso a una solución sin errores se le llama depuración. 
+        La depuración o prueba resulta una tarea tan creativa como el mismo desarrollo de la solución, por ello se debe considerar con el mismo interés y entusiasmo. 
+        Resulta conveniente observar los siguientes principios al realizar una depuración, ya que de este trabajo depende el éxito de nuestra solución.</p>
+
+        <p><b>Documentación</b></p>
+        <p>Es la guía o comunicación escrita es sus variadas formas, ya sea en enunciados, procedimientos, dibujos o diagramas.
+        A menudo un programa escrito por una persona, es usado por otra. Por ello la documentación sirve para ayudar a comprender o usar un programa o para facilitar futuras modificaciones (mantenimiento).</p>
+
+        <p>La documentación se divide en tres partes:</p>
+         <ul>
+         	<p><li type="disc">Documentación Interna</li></p>
+            <p><li>Documentación Externa</li></p>
+            <p><li>Manual de usuario</li></p>
+        </ul>
+
+        <p>Documentación Interna: Son los comentarios o mensaje que se añaden al código fuente  para hacer más claro el entendimiento de un proceso.</p>
+
+        <p>Documentación Externa: Se define en un documento escrito los siguientes puntos:</p>
+        <ul>
+
+            <p><li type="disc">Descripción del Problema</li></p>
+            <p><li>Nombre del autor</li></p>
+            <p><li>Algoritmo (diagrama de flujo o pseudocódigo)</li></p>
+            <p><li>Diccionario de datos</li></p>
+            <p><li>Código fuente(programa)</li></p>
+        </ul>
+            
+        <p>Manual del Usuario: Describe paso a paso la manera cómo funciona el programa, con el fin de que el usuario obtenga el resultado deseado.</p>
+
+        <p><b>Mantenimiento</b></p>
+        <p>Se lleva a cabo después de terminado el programa, cuando se detecta que es necesario hacer algún cambio, ajuste o complementación al programa para que siga trabajando de manera correcta. Para poder realizar este trabajo se requiere que el programa este correctamente documentado.</p>
+
+    </div>
+</body>
+</html>

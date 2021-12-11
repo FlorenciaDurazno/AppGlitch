@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<title>Unidad III </title>
+<link rel="stylesheet"  href="../CSS/estilo1.css"/>
+
+<style>
+body {
+    font-family: "Segoe UI", sans-serif;
+    font-size:100%;
+    margin:0;
+    padding:0;
+}
+
+header {
+    background:#333;
+    color:#eee;
+    width:100%;
+}
+
+input#abrir-cerrar {
+    visibility:hidden;
+    position: absolute;
+    top: -9999px;
+}
+
+
+label[for="abrir-cerrar"] {
+    cursor:pointer;
+    padding: 0rem;
+    background-color:#333333;
+    color:#CCFFFF;
+    display:inline-block;
+    width:100%;
+    position: fixed;
+
+}
+
+.cerrar {
+    display:none;
+}
+
+#mennu {
+    width:0;
+}
+
+#contenido {
+    margin-left:0;
+}
+
+input#abrir-cerrar:checked ~ #mennu {
+    width:300px;
+}
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"], input#abrir-cerrar:checked ~ #contenido {
+    margin-left:300px;
+    transition: margin-left .4s;
+}
+
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"] .cerrar {
+    display:inline;
+}
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"] .abrir {
+    display:none;
+}
+
+.mennu {
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #00324b;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding: 1rem 0;
+    box-sizing:border-box;
+}
+
+.mennu .boton-cerrar {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+    display: block;
+    padding: 0;
+    line-height: 1.5rem;
+    margin: 0;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.mennu ul, .mennu li{
+    margin:0;
+    padding:0;
+    list-style:none inside;
+}
+
+.mennu ul {
+    margin: 4rem auto;
+    display: block;
+    width: 80%;
+    min-width:200px;
+}
+
+.mennu a {
+    display: block;
+    font-size: 120%;
+    color: #eee;
+    text-decoration: none;
+    
+}
+
+.mennu a:hover{
+    color:#fff;
+    background-color: #f90;
+
+}
+
+h1 {
+    color:#000033;
+    font-size:30pt;
+    font-weight:normal;
+    font-family: arial;
+}
+#contenido {
+    transition: margin-left .4s;
+    padding: 1rem;
+}
+
+.abrir-cerrar {
+    color: #2E88C7;
+    font-size:1rem;   
+}
+
+------SUBMENU-------
+
+
+</style>
+
+
+</head>
+
+
+<body>
+    <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
+    <label for="abrir-cerrar">&#9776; <img src="../CSS/header.jpg" width="1295px" height="140px"><span class="abrir"></span><span class="cerrar"></span></label>
+    <div id="mennu" class="mennu">
+
+        <ul class="menu acordion">
+            <li><a href="../index.html">INICIO</a></li><br>
+            <li><a href="Temario.pdf">TEMARIO</a></li><br>
+
+                     <!--SUBMENU-->
+          
+           <span class="plus">
+            <li><a class="submenu" href="">UNIDADES</a>
+               <li><a href="unidad1.html">Unidad I. Conceptos básicos </a></li>        
+               <li><a href="unidad2.html">Unidad II. Expresiones</a> </li>
+               <li><a href="unidad3.html">Unidad III. Algoritmos y diagramas de flujo</a></li>
+               <br>
+         <li><a class="submenu" href="">PRACTICAS</a>
+               <li><a href="EjerUni1.html">Unidad I. Conceptos básicos</a></li>        
+               <li><a href="EjerUni2.html">Unidad II. Expresiones</a> </li>
+               <li><a href="EjerUni3.html">Unidad III. Algoritmos y diagramas de flujo</a></li>
+               <br>
+         <li><a class="submenu" href="">CUESTIONARIOS</a>
+               <li><a href="eva1.html">Unidad I. Conceptos básicos</a></li>        
+               <li><a href="eva2.html">Unidad II. Expresiones</a> </li>
+               <li><a href="eva3.html">Unidad III. Algotirmos y diagramas de flujo</a></li>
+
+        </ul>
+    </div>
+    <div id="contenido" >
+             </div>
+
+
+	<div id="uni1">
+		<BR>
+		<br>
+        <BR>
+
+        <p></p>
+        <br>
+        <br>
+        <BR>
+        <BR>
+
+
+        <center><h2>Unidad Temática III  Algoritmos y diagramas de flujo</h2></center>
+        <br>
+
+        <p>Objetivo. El alumno elaborará algoritmos, diagramas de flujo y pseudocódigos  para la  resolución de problemas.</p>
+        <br>
+
+        <h3>3.1. Reglas para elaborar algoritmos, pseudocódigo y diagramas de flujo</h3>
+        <br>
+        <p><b><u>Algoritmo</u></b></p>
+        <p><b>Concepto:</b> Es un método para resolver un problema mediante una secuencia de instrucciones, cada una de las cuales especifica las operaciones que debe realizar la computadora.</p>
+        <p><b>Características:</b></p>
+        <ul>
+        	<p><li type="disc">Debe ser preciso e indicar el orden de realización de cada paso.</li></p>
+        	<p><li>Debe estar definido. Si se sigue un algoritmo dos o más veces, con los mismos valores iníciales se debe obtener el mismo resultado.</li></p>
+        	<p><li>Debe ser finito. Si se sigue un algoritmo, se debe terminar en algún momento, es decir debe tener un número finito de pasos.</li></p>
+        </ul>
+        <br>
+
+        <p><b><u>Pseudocódigo</u></b></p>
+        <p><b>Concepto:</b></p>
+        <p>Debe ser finito. Si se sigue un algoritmo, se debe terminar en algún momento, es decir debe tener un número finito de pasos.</p>
+        <p>Es la representación narrativa de los pasos que debe seguir un algoritmo para dar solución a un problema determinado. El pseudocódigo utiliza palabras que indican el proceso a realizar.</p>
+        <p><b>Reglas o procedimiento:</b></p>
+        <p>No hay una forma estándar de diseñar un pseudocódigo, depende en gran medida del criterio del programador. A pesar de ello, es aconsejable respetar lo más rigurosamente posible las siguientes normas de carácter general:</p>
+        <ul>
+        	<p><li type="discs">Todo pseudocódigo comienza con la palabra «Inicio» y termina con la palabra «Fin».</li></p>
+        	<p><li>Cada instrucción se debe escribir en una línea.</li></p>
+        	<p><li>Para su descripción, se utilizan una serie de palabras reservadas: Inicio, fin, si, entonces, si no, fin-si, mientras, etc.</li></p>
+        	<p><li>Debe escribirse «identado» (tabulado) para mostrar claramente las dependencias de control dentro de los módulos.</li></p>
+        	<p><li>Cada estructura utilizada tendrá un solo punto de comienzo y un solo punto de fin de estructura. Algunos autores suelen utilizar un corchete para unir el principio y fin de cada estructura.</li></p>
+        	<p><li>Se escribirá en minúscula, excepto aquellos nombres que elige el programador, como son los nombres de variables, de ficheros, de módulos, etc., que se escribirán con mayúsculas.</li></p>
+        	<p>A continuación se muestra un algoritmo en pseudocódigo para obtener la suma de 2 números:</p>
+        	<p>Inicio</p>
+        	<p>Solicitar x, y</p>
+        	<p>Calcular Suma=x+y</p>
+        	<p>Imprimir Suma</p>
+        	<p>Salir</p>
+        </ul>
+        <br>
+
+        <p><b><u>Diagramas de flujo</u></b></p>
+        <p><b>Concepto:</b>Representación grafica del algoritmo. Los símbolos utilizados han sido normalizados por el instituto norteamericano de normalización (ANSI).</p>
+        <p><b>Reglas o procedimiento:</b></p>
+        <ul>
+        	<p><li type="disc">Se debe usar solamente líneas de flujo horizontales y/o verticales.</li></p>
+        	<p><li>Se debe evitar el cruce de líneas utilizando los conectores.</li></p>
+        	<p><li>Se debe usar conectores solo cuando sea necesario.</li></p>
+        	<p><li>No deben quedar líneas de flujo sin conectar.</li></p>
+        	<p><li>Se deben trazar los símbolos de manera que se puedan leer de arriba hacia abajo y de izquierda a derecha.</li></p>
+        	<p><li>Todo texto escrito dentro de un símbolo deberá ser escrito claramente, evitando el uso de muchas palabras.</li></p>
+        </ul>
+        <br>
+
+        <p>Simbología:</p>
+        <center><img src="../imagenes/3.jpg"></center>
+        <br>
+        
+        <h3>3.2. Contadores y acumuladores</h3>
+        <br>
+        <p>Los procesos  repetitivos son la base del uso de las computadoras. En estos procesos se necesitan normalmente contar los sucesos o acciones internas del bucle, como pueden ser los elementos de un fichero, el número de iteraciones a realizar por el bucle, etc. Una forma de controlar un bucle es mediante un contador.</p>
+        <p>Bucle:</p>
+        <p><b>Contador</b></p>
+        <p>Es una variable cuyo valor se incrementa o decrementa en una cantidad constante en cada iteración. La instrucción que representa a un contador es: CONT  CONT + 1.</p>
+        <p>El contador puede ser negativo (incrementos uno a uno) o negativo (decrementos, uno a uno)</p>
+
+        <p>Existen 2 acciones relacionadas a los contadores:</p>
+        <ul>
+        	<p><li type="disc">Inicializacion</li></p>
+        	<p><li>Incremento</li></p>
+        </ul>
+        <br>
+
+        <p>Inicializar: Atribución de un valor inicial a una variable. Antes de empezar a contar los eventos, todo contador se inicializa generalmente en cero (0), y es algo lógico, ya que al principio ningún evento a sucedido. La inicialización se hace de forma directa en las instrucciones.Estos deben inicializarse al principio de los programas, antes de la estructura de control.</p>
+        <p>El incremento se realiza cuando los eventos suceden. La sintaxis para escribir el incremento de un contador llamado C1 es: C1 = C1 + 1;  Esto quiere decir que el nuevo valor de C1 es su anterior valor más uno. El resultado de un contador se muestra al haber terminado de revisar todos los eventos, generalmente al final de un programa.</p>
+        <br>
+
+        <p><b>Acumulador</b></p>
+        <p>O también llamado totalizadora variable cuya misión es almacenar cantidades variables resultantes de sumas sucesivas. Realiza la misma función que un contador, con la diferencia de que el incremento o decremento de cada suma es variable en lugar de constante, como en el caso del contador.</p>
+        <p>Se representa la instrucción: S  S + N     Donde N es una variable y no una constante</p>
+
+        <h3>Estructuras de control</h3>
+        <p>El desarrollo de un programa viene determinado por el orden en que aparecen las instrucciones. Estas instrucciones se denominan estructuras de control porque permiten ejecutar un conjunto de instrucciones cuando se verifica una condición o ejecutar iterativamente un bloque de instrucciones mientras una expresión sea válida.</p>
+        <p>Existen  tipos de sentencias de control</p>
+        <ol>
+        	<p><li value="1"> Secuenciales</li></p>
+        	<p><li>Desisión</li></p>
+        	<ul>
+        		<p><li type="disc">Simple</li></p>
+        		<p><li type="disc">Compuesta</li></p>
+        		<p><li type="disc">Anidada</li></p>
+        		<p><li type="disc">Multiple</li></p>
+        	</ul>
+        	<p><li>Repetición</li></p>
+        </ol>
+        <br>
+
+        <h3>Estrucuras de control secuenciales</h3>
+        <p>La estructura secuencial es aquella en la que una acción (instrucción) sigue a otra en secuencia. Las tareas se suceden de tal modo que la salida de una es la entrada de la siguiente y así sucesivamente hasta el fin del proceso.</p>
+        <center><img src="../imagenes/fig9.png" width="280px" width="123px"></center>
+        <br>
+
+        <h3>3.3. Estruturas de control de decisión</h3>
+        <p>Es la que realizan un conjunto de instruciones de entre varios posibles, dependiendo del cumplimiento, o no, de una determinada condición</p>
+        <p>Existen cuatro tipos de estructuras condicionales:</p>
+        <ul>
+        	<p><li type="disc">Estructura condicional simple</li></p>
+        	<p><li>Estructura condicional doble</li></p>
+        	<p><li>Estructura condicional anidada</li></p>
+        	<p><li>Estructura condicional multiple</li></p>
+        </ul>
+
+        <h3>3.3.1. Estructura condicional simple</h3>
+
+        <p>La sentencia condicional simple considera un sólo caso, se verifica la condición en caso de que se cumpla, es decir que sea verdadera la condición, se desarrolla una serie de instrucciones, en caso contrario no es considerado.</p>
+
+        <ul>
+        	<p><li type="disc"><i>Representación Algorítmica</i></li></p>
+        	<ol>
+        		<p><li value="1"> Evaluar Si condición entonces ir a paso 2</li></p>
+        		<p><li>Realizar la operación A</li></p>
+        	</ol>
+        	<p><li>Representación Pseudocódigo</li></p>
+        	<p><b>If</b> (Condición) <b>then</b></p>
+        	<p>Acción(es)</p>
+        	<p><b>End if</b></p>
+        	<p><li>Representación Diagrama de flujo</li></p>
+        	<center><img src="../imagenes/fig7.png" width="367px" height="214px"></center>
+        </ul>
+        <br>
+
+        <p><b>Ejercicio 01</b></p>
+        <p>Un hombre desea saber cuánto dinero se genera por concepto de intereses sobre la cantidad que tiene en inversión en el banco. El decidirá reinvertir los intereses siempre y cuando estos excedan a $7000, y en ese caso desea saber cuánto dinero tendrá finalmente en su cuenta.</p>
+        <center><img src="../imagenes/33.jpg" width="500px" height="650px"></center>
+        <br>
+
+        <p><b>Ejercicio 02</b></p>
+        <p>Dado como dato la calificación de un alumno en un examen, escriba "Aprobado" en caso de que esa calificación sea mayor a 8.</p>
+        <br>
+
+        <p><b>Ejercicio 03</b></p>
+        <p>Dado como dato el sueldo de un trabajador, aplique un aumento del 15% si su sueldo es inferior a 1000. Imprima el nuevo sueldo del trabajador.</p>
+        <br>
+
+        <h3>3.3.2 Estructura condicional doble o compuesta</h3>
+        <p>Esta sentencia permite que el flujo del diagrama se bifurque por dos ramas diferentes en el punto de la toma de decisión(es). Si al evaluar la condición o condiciones, el resultado es verdadero, entonces se sigue por un camino especifico y se ejecuta(n) cierta(s) operación(es). Por otra parte si el resultado es falso entonces se sigue por otro camino y se ejecuta(n) otra(s) operación(es). En ambos casos, luego de ejecutarse la(s) operación(es) indicada(s), se continua con la secuencia normal del programa.</p>
+
+        <ul>
+        	<p><li type="disc"><i>Representación Algorítmica</i></li></p>
+        	<ol>
+        		<p><li value="1"> Evaluar Si condición entonces ir a paso 2 en otro caso ir a paso 3</li></p>
+        		<p><li>Realizar la operación A</li></p>
+        		<p><li>Realizar la operación B</li></p>
+        	</ol>
+        	<p><li><i>Represntación Pseudocódigo</i></li></p>
+        	<p><b>If (Condición) <b>then</b></b></p>
+        	<p>Acción(es)</p>
+        	<p><b>Else</b></p>
+        	<p>Acción(es)</p>
+        	<p><b>End if</b></p>
+        	<p><li><i>Representación Diagrama de flujo</i></li></p>
+        <center><img src="../imagenes/fig3.png"></center>
+        </ul>
+        <br>
+
+        <p><b>Ejercicio 04</b></p>
+        <p>Determinar si un alumno aprueba o reprueba un curso, sabiendo que aprobara si su promedio de dos calificaciones es mayor o igual a 70; reprueba en caso contrario.</p>
+        <center><img src="../imagenes/4.jpg" width="530px" height="670px"></center>
+        <br>
+
+        <p><b>Ejercicio 05</b></p>
+        <p>Dado como dato el sueldo de un trabajador, aplique un aumento del 15% si su sueldo es inferior a $1000 y 12% en caso contrario.</p>
+        <br>
+
+        <p><b>Ejercicio 06</b></p>
+        <p>Dado como dato un número determinar si este es positivo o negativo</p>
+        <br>
+
+        <h3>3.3.3 Estructura condicional anidada</h3>
+        <p>Existen casos en el desarrollo de la solución de problemas en el que luego de  tomar una decisión y marcar el camino correspondiente a seguir, es necesario tomar otra decisión. Se señala luego de evaluar las condiciones, la rama correspondiente a seguir y nuevamente podemos tener que tomar otra decisión. Este proceso puede repetirse muchas veces.</p>
+
+        <ul>
+        	<p><li type="disc"><i>Representación Algorótmica</i></li></p>
+        	<ol>
+        		<p><li value="1">  Evaluar Si condición entonces ir a paso 2 en otro caso ir a paso 3 </li></p>
+        		<p><li> Realizar la operación A</li></p>
+        		<p><li>Si Condición entonces ir a paso 4 en otro caso ir a paso 5</li></p>
+        		<p><li>Realizar la operación B</li></p>
+        		<p><li>Realizar la operación C</li></p>
+        	</ol>
+        	<p><li><i>Representación Pseudocódigo</i></li></p>
+        	<p><b>If</b>(Condición)<b>then</b></p>
+        	<center><p>Accion(es)</p></center>
+        	<p><b>Else</b></p>
+        	<p><b>If</b>(Condición)<b>then</b></p>
+        	<p>Accion(es)</p>
+        	<p><b>Else</b></p>
+        	<p>Accion(es)</p>
+        	<p><b>End if</b></p>
+        	<p><b>End if</b></p>
+
+        	<p><li><i>Representación Diagrama de flujo</i></li></p>
+        	<center><img src="../imagenes/fig8.png" width="575px" height="324px"></center>
+        </ul>
+        <br>
+
+        <p><b>Ejercicio 07</b></p>
+        <p>Leer tres números diferentes y determinar cuál es el mayor valor.</p>
+        <center><img src="../imagenes/7.jpg"></center>
+        <center><img src="../imagenes/77.jpg"></center>
+        <br>
+
+        <p><b>Ejercicio 08</b></p>
+        <p>Dados como datos A, B y C que representan números diferentes, construya un diagrama de flujo para escribir estos números en forma descendente.</p>
+        <br>
+
+        <p><b>Ejercicio 09</b></p>
+        <p>En una tienda, efectúan un descuento s los clientes dependiendo del monto de la compra. El descuento se efectúa con el siguiente criterio:</p>
+        <p>Si el monto es menor que $500  No hay descuento.</p>
+        <p>Si el monto está comprendido entre $500 y $1,000  5% de descuento.</p>
+        <p>Si el monto está comprendido entre $1,000 y $7,000  11% de descuento.</p>
+        <p>Si el monto está comprendido entre $7,000 y $15,000  18% de descuento.</p>
+        <p>Si el monto mayor a $15,000  25% de descuento.</p>
+
+        <h3>3.3.4. Estructura condicional múltiple</h3>
+        <p>Permite que el flujo del diagrama se bifurque or varias ramas en el punto de la toma de decisión(es), esto es en función del valor que tome el selector. Así si el selector toma el valor 1 se ejecutara la acción 1, si toma el valor 2 tomara la acción 2, si toma el valor n realizara la función n.</p>
+        <center><img src="../imagenes/333.jpg"></center>
+        <br>
+
+        <p><b>Ejercicio 10</b></p>
+        <p>Leer la calificación de un alumno e imprimir lo siguiente:</p>
+        <p>Si la calificación es 10 imprimir excelente.</p>
+        <p>Si la calificación es 9 imprimir bien.</p>
+        <p>Si la calificación es 8 imprimir regular.</p>
+        <p>Si la calificación es 7 imprimir suficiente.</p>
+        <p>Si la calificación es cualquier otro valor imprimir calificación insuficiente o no valida.</p>
+        <center><img src="../imagenes/10.jpg"></center>
+        <center><img src="../imagenes/10_2.jpg"></center>
+        <br>
+
+        <p><b>Ejercicio 11</b></p>
+        <p>Dados como datos la categoría y sueldo de un trabajador, calcule el aumento correspondiente teniendo en cuenta la siguiente tabla. Imprima la categoría del trabajador y su nuevo sueldo.</p>
+        <img src="../imagenes/fig4.png">
+        <br>
+
+        <p><b>Ejercicio 12</b></p>
+        <p>Dados 2 números determinar qué operación se quiere realizar con ellos: Suma, resta, multiplicación o división. Mostrar el resultado de la operación.</p>
+
+        <h3>Sentencias de control de repetición</h3>
+        <p>Es muy común encontrar en la práctica algoritmos cuyas operaciones se deben ejecutar un número repetido de veces. Si bien las instrucciones son las mismas, los datos sobre los que operan varían. El conjunto de instrucciones que se ejecuta repetidamente se llama ciclo.</p>
+        <p>Todo ciclo debe terminar de ejecutarse luego de un número finito de veces, por lo que es necesario en cada iteración del mismo, evaluar las condiciones necesarias para decidir si se debe seguir ejecutando o si debe detenerse. En todo ciclo, siempre debe existir una condición de parada o fin de ciclo.</p>
+        <p>En algunos algoritmos podemos establecer a priori que el ciclo se repetir un numero definido de veces. Es decir, el número de repeticiones no dependerá de las proposiciones dentro del ciclo. Por otra parte, en algunos algoritmos no podemos establecer a priori el número de veces que ha de ejecutarse el ciclo, sino que este número dependerá de las proposiciones dentro del mismo.</p>
+        <p>Se debe tener en cuenta lo siguiente para la construcción de una estructura repetitiva:</p>
+        <ul>
+        	<p><li type="disc"><b>El cuerpo del bucle:</b>Es el grupo de instrucciones que se van a repetir. Dentro del cuerpo del bucle, debe existir una instrucción que modifique la condicón lógica de terminación.</li></p>
+        	<p><li><b>Las sentencias de inicialización:</b>Son instrucciones que inicializan contadores y acumuladores.</li></p>
+        	<p><li><b>Las condiciones para la terminación del bucle:</b>expresiones lógicas que controlan la terminación del bucle.</li></p>
+        </ul>
+        <br>
+
+        <p><b><i>Características</i></b></p>
+        <ul>
+        	<p><li type="disc">Las estructuras de control repetitivas rompen la secuencialidad en la ejecución de los programas, generando repeticiones de sentencias o bucles.</li></p>
+        	<p><li>Las 3 estructuras son equivalentes o intercambiables.</li></p>
+        </ul>
+        <br>
+
+        <p>Para poder entender un proceso repetitivo, se necesita conocer el concepto de dos expresiones: acumulador y contador.</p>
+        <br>
+        <p><b>Contador:</b></p>
+        <p>En un proceso repetitivo cuya función es contar los sucesos o acciones internas del bucle, como puede ser el número de iteraciones del bucle, la cantidad de elementos que tiene un archivo, un vector, una matriz, etc. Una forma de controlar un bucle es mediante un contador.<u>Un contador</u> es una variable cuyo valor se incrementa o decrementa en una cantidad constante p fija en cada iteración. La forma de representar un contador=contador + 1.</p>
+        <br>
+
+        <p><b>Acumulador</b></p>
+        <p>Es una variable cuya misión es almacenar cantidades variables. Realiza la misma función que un contador pero con la diferencia de que el incremento o decremento es variable y no contante como el contador. La forma de representar un acumulador es:</p> 
+        <p>acumulador = acumulador + ValorVariable</p>
+        <br>
+        <p><b>Existen 3 sentencias de control de repetición</b></p>
+        <ul>
+        	<p><li type="disc">For(Repetir)</li></p>
+        	<p><li>While(Mientras</li></p>
+        	<p><li>Do While(Hacer mientras)</li></p>
+        </ul>
+        <br>
+
+        <p><b>Cuadro resumen:</b></p>
+        <img src="../imagenes/fig5.png">
+        <br>
+
+        <h3>3.4.1. Estructura repetitiva FOR (Repetir)</h3>
+        <p>La estructura Repetir conocida comúnmente como FOR, es la estructura algorítmica adecuada para utilizar en un ciclo que se ejecutara un numero definido de veces. Este tipo de estructura está presente en todos los lenguajes de programación ya sea estructurados u orientados a objetos.</p>
+        <p>En muchas ocasiones se conoce de antemano el número de veces que se desean ejecutar las acciones o instrucciones de un bucle. En estos casos en los que el número de iteraciones es fino, se debe utilizar esta estructura, por ejemplo: ingresar 10 notas, 100 números, etc.</p>
+        <center><img src="../imagenes/fig6.png"></center>
+        <br>
+
+        <p><b>Ejercicio 13</b></p>
+        <p>Calcular el promedio de un alumno que tiene 7 calificaciones en la materia de Diseño Estructurado de Algoritmos</p>
+        <center><img src="../imagenes/13.jpg" width="560px" height="650px"></center>
+        <br>
+
+        <p><b>Ejercicio 14</b></p>
+        <p>Hallar la suma de los 10 primeros números enteros positivos  y su promedio.</p>
+        <br>
+
+        <p><b>Ejercicio 15</b></p>
+        <p>Hallar la suma y promedio de 20 numeros enteros ingresados por teclado.</p>
+        <br>
+
+        <h3>Estructura repetitiva WHILE(Mientras)</h3>
+        <p>El CICLO MIENTRAS ejecuta un bloque de acciones "mientras" que una condición dada se cumpla, es decir, cuando la condición se evalúa verdadera. La condición es evaluada antes de ejecutar el bloque de acciones y si la condición no se cumple, el bloque no se ejecuta. De esta manera es que el número  de repeticiones del bloque de acciones sea cero, pues, si la condición de entrada se evalúa falsa, el bloque no será ejecutado alguna vez.</p>
+        <center><img src="../imagenes/wile.png"></center>
+        <br>
+
+        <p>Las sentencias (una o más) del cuerpo del ciclo se ejecutan mientras la condición (expresión lógica) es cierta. Cuando la condición es falsa, termina la ejecución del ciclo.</p>
+        <p>Se pregunta al principio por la condición, por tanto el ciclo se ejecuta cero (si la primera vez la condición es falsa) o más veces. Si la condición nunca se hace falsa, el programa entra en un "ciclo infinito", es decir, las sentencias del cuerpo del ciclo se ejecutarán indefinidamente.</p>
+        <p>Se debe tomar en cuenta INICIALIZAR las variables que intervienen en la condición antes de ejecutar el ciclo por primera vez, ya que lo primero que hace la estructura es evaluar la condición. No olvide MODIFICAR dentro del cuerpo del ciclo los valores de las variables que intervienen en la condición, para garantizar que en algún momento ésta se haga falsa y el ciclo pueda terminar su ejecución y así garantizar que el ciclo no es infinito</p>
+        <p>Cuando la sentencia mientras se ejecuta, el primer paso es la evaluación de la expresión lógica. Si se evalúa a falso, ninguna acción se realiza y el programa prosigue en la siguiente sentencia después del bucle. Si la expresión lógica se evalúa a verdadera, entonces se ejecuta las sentencias contenidas dentro del cuerpo del bucle y se evalúa de nuevo la expresión. Este proceso se repite mientras que la expresión lógica sea verdadera.</p>
+        <p>Después de cada iteración, la expresión lógica se evalúa y se verifica de nuevo, y si es verdadera, el bucle se repite de nuevo; si cambia de verdadera a falsa, la sentencia mientras finaliza y el programa prosigue en la siguiente sentencia del programa.</p>
+        <br>
+
+        <p><b>Ejercicio 16</b></p>
+        <p>Calcular la suma de una lista de números enteros ingresados por el usuario</p>
+        <center><img src="../imagenes/116.png" width="557px" height="485px"></center>
+        <center><img src="../imagenes/16.jpg" width="557px" height="450px"></center>
+        <br>
+
+        <p><b>Ejercicio 17</b></p>
+        <p>Obtener el factorial de N número introducido por el usuario.</p>
+        <br>
+
+        <p><b>Ejercicio 18</b></p>
+        <p>Una papelería debe imprimir una lista de los valores para diferentes cantidades de fotocopias a sacar. El precio unitario de cada fotocopia debe leerse. Imprimir un listado teniendo en cuenta que se tiene una política de descuento para cantidades que se obtengan del mismo original así­: el 12% para fotocopias entre 100 y 200, del 15% para fotocopias entre 201 y 400, y del 18% para fotocopias por cantidades mayores a 400.</p>
+
+        <h3>Estructura repetitiva DO-WHILE(Hacer Mientras)</h3>
+        <p>El CICLO HACER-MIENTRAS es similar al ciclo mientras, la diferencia radica en el momento de evaluación de la condición. En  el ciclo mientras la condición se evalúa antes de la ejecución del bloque, en el ciclo HACER-MIENTRAS la condición se evalúa después de ejecutar el bloque de acciones, por lo tanto, el bloque se ejecuta por lo menos una vez. El bloque se ejecuta nuevamente si la condición se evalúa a verdadero y no se ejecuta más si se evalúa falso.</p>
+        <p>Por otra parte, un caso típico de uso de los bucles do...while, son los denominados "menús". En ellos se presenta una serie de opciones (un menú) al usuario que ejecuta nuestro código, y se le pide que introduzca, por ejemplo, un número correspondiente a la opción quiere ejecutar. Tras elegir la opción, el programa debe ejecutar las operaciones correspondientes. Una de las opciones se corresponde con un número que indica que se va a salir del menú, de forma que la condición de finalización del bucle es si el número introducido es el de salida del menú.</p>
+        <center><img src="../imagenes/do_while.jpg"></center>
+        <br>
+
+        <p><b>Ejercicio 19</b></p>
+        <p>Calcular la suma de números enteros ingresados por el usuario terminando con un cero</p>
+        <center><img src="../imagenes/19.jpg"></center>
+        <center><img src="../imagenes/19_1.jpg"></center>
+        <br>
+
+        <p><b>Ejercicio 20</b></p>
+        <p>Realizar la suma de dos números, mostrar en pantalla la suma; preguntar si se desea realizar otra suma, si la repuesta es "s" vuelve a pedir los números.</p>
+
+        <h3>ANEXOS</h3>
+        <ul>
+        	<p><li type="disc">Secuencial</li></p>
+        	<p><li>Simple</li></p>
+        	<p><li>Compuesto</li></p>
+        	<p><li>Anidado</li></p>
+        	<p><li>Multiple</li></p>
+        	<p><li>For</li></p>
+        	<p><li>While</li></p>
+        	<p><li>Do-While</li></p>
+        </ul>
+	</div>
+</body>
+</html>

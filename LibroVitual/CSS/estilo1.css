@@ -1,0 +1,47 @@
+body{
+	background-color:#00324b;
+}
+
+
+#uni1{
+	float: right;
+	width: 1293px;
+	font-family: arial;
+	margin-right: -35px;
+	margin-top:-22px;
+	font-size: 12pt;
+	color: black;
+	background-color:white;
+	text-align:justify;
+}
+h2{
+	color: #000099;
+	margin-left:3rem;
+ 	margin-right: 3em;
+
+}
+
+h3{
+	color: #003399;
+	margin-left:3rem;
+ 	margin-right: 3em;
+
+}
+ p{
+ 	margin-left:3rem;
+ 	margin-right: 3em;
+
+ }
+ p li{
+ 	margin-left:3rem;
+ 	margin-right: 3em;
+
+ }
+ ul li{
+ 	margin-left:3rem;
+ 	margin-right: 3em;
+ }
+table{
+	margin-left:3rem;
+ 	margin-right: 3em;
+}

@@ -1,0 +1,121 @@
+<html>
+<meta http-equiv="AUTHOR" content="jvaamond@fresno.pntic.mec.es y crisdiaz@telecable.es">
+<title>Test generado con GenerTest</title>
+<link rel="stylesheet"  href="../CSS/estilo.css"/>
+<head>
+<SCRIPT LANGUAGE="JavaScript"> 
+<!--
+var alfab="abcdefghijklmnñopqrstuvxyz"
+var nump=10
+var nrp=4
+function corrixe(){
+var acertos=0
+var sol=""
+fiestrar=open("","novar","width=300,height=350,scrollbars")
+fiestrar.document.write("<table border='0' width='100%' cellspacing='0' cellpadding='4' bgcolor='#FFFFF2'><tr><td><p align='center'>")
+for(i=1;i<=nump;i++){var senresp=true 
+	for(j=1;j<=nrp;j++){
+		if(eval("document.test.resp"+i+"["+(j-1)+"].checked")==true){
+			sol+=alfab.substring(j-1,j);senresp=false;break
+		}
+}
+if(senresp==true){sol+="-"}
+}
+var tempo= new Date()
+fiestrar.document.write("<br>Hora: "+tempo.getHours()+":"+tempo.getMinutes())
+fiestrar.document.write("<br>Fecha: "+tempo.getDate()+"/"+eval(tempo.getMonth()+1)+"/"+tempo.getYear())
+fiestrar.document.write("<p align='center'><table>")
+fiestrar.document.write("<tr><td colspan='4' align='center'><font size='5'>Resultados del test</font><p></td></tr>")
+fiestrar.document.write("<tr><td width='33' bgcolor='#FFF4F4'>"+
+"<p align='center'>Preg</td><td width='35' bgcolor='#FFF4F4' align='center'>"+
+"Solu</td><td width='35' bgcolor='#FFF4F4' align='center'>Resp</td>"+
+"<td width='35' bgcolor='#FFF4F4'><p align='center'>Resul</td></tr>")
+for(i=1;i<=sol.length;i++){
+	resposta=document.test.tras.value.substring(i-1,i)
+	solucion=sol.substring(i-1,i)	
+	if(resposta==solucion){
+	acertos+=1
+	fiestrar.document.write("<tr><td align='center'>"+i+
+	"</td><td align='center'>"+resposta+"</td><td align='center'>"+solucion+
+	"</td><td align='center'><font color='#009933'>acierto</font></td></tr>")
+	}
+	else{
+	fiestrar.document.write("<tr><td align='center'>"+i+"</td><td align='center'>"+resposta+
+	"</td><td align='center'>"+solucion+"</td><td align='center'><font color='#FF0000'>fallo</font></td></tr>")
+	}
+}
+nota=10/nump*acertos;
+if(Math.floor(nota)!=Math.ceil(nota)){cadea=""+nota;for(var i=0;i<=cadea.length;i++){
+if(cadea.charAt(i)=="."){nota=cadea.substring(0,i+3);break;}}}
+fiestrar.document.write("<tr><td colspan='4' align='center'>Aciertos: "+acertos+" de "+nump+"</td></tr>")
+fiestrar.document.write("<tr><td colspan='4' align='center'>Nota: "+nota+"</td></tr>")
+fiestrar.document.write("</td></tr><tr><td colspan='4' align='center'><p><form><input type='button' value='Cerrar' name='pecharf' onClick='window.close()' style='background-color: #FFCC66'></form></td></tr></table></td></tr></table>")
+fiestrar.document.write("</table>")
+fiestrar.document.close()
+}
+// -->
+</SCRIPT></head>
+<body>
+<form name="test">
+<table width="100%"><tr><td align="center"><table>
+<tr>
+<td>
+<p align="center">Selecciona la respuesta correcta</td>
+</tr></table></td></tr><tr><td>
+<table><tr><td><font size="4" color="#FF00FF">1. </font></td><td bgcolor="#F2FFF2" width="100%">Es un conjunto de símbolos, números o variables utilizados en matemáticas para representar relaciones aritméticas.</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>a) </td><td><input type="radio" name="resp1"></td><td>Expresiones algorítmicas</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>b) </td><td><input type="radio" name="resp1"></td><td>Expresiones algebraicas</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>c) </td><td><input type="radio" name="resp1"></td><td>Expresiones aritméticas</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>d) </td><td><input type="radio" name="resp1"></td><td>Expresiones relacionales</td></tr></table>
+<table><tr><td><font size="4" color="#FF00FF">2. </font></td><td bgcolor="#F2FFF2" width="100%">Es un conjunto de símbolos, números o variables que representan una instrucción específica y computable para el computador.</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>a) </td><td><input type="radio" name="resp2"></td><td>Expresiones algorítmicas</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>b) </td><td><input type="radio" name="resp2"></td><td>Expresiones algebraicas</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>c) </td><td><input type="radio" name="resp2"></td><td>Expresiones aritméticas</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>d) </td><td><input type="radio" name="resp2"></td><td>Expresiones relacionales</td></tr></table>
+<table><tr><td><font size="4" color="#FF00FF">3. </font></td><td bgcolor="#F2FFF2" width="100%">Operador relacional que significa diferente.</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>a) </td><td><input type="radio" name="resp3"></td><td>=</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>b) </td><td><input type="radio" name="resp3"></td><td>>=</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>c) </td><td><input type="radio" name="resp3"></td><td><=</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>d) </td><td><input type="radio" name="resp3"></td><td><></td></tr></table>
+<table><tr><td><font size="4" color="#FF00FF">4. </font></td><td bgcolor="#F2FFF2" width="100%">Cuando dos operadores son del mismo nivel en la jerarquía deben resolverse:</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>a) </td><td><input type="radio" name="resp4"></td><td>De derecha a izquierda</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>b) </td><td><input type="radio" name="resp4"></td><td>De izquierda a derecha</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>c) </td><td><input type="radio" name="resp4"></td><td>Primero la multiplicación</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>d) </td><td><input type="radio" name="resp4"></td><td>Ninguna de las anteriores</td></tr></table>
+<table><tr><td><font size="4" color="#FF00FF">5. </font></td><td bgcolor="#F2FFF2" width="100%">Es el operador con mayor prioridad.</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>a) </td><td><input type="radio" name="resp5"></td><td>Suma</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>b) </td><td><input type="radio" name="resp5"></td><td>Multiplicación</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>c) </td><td><input type="radio" name="resp5"></td><td>Potencia</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>d) </td><td><input type="radio" name="resp5"></td><td>División Entera</td></tr></table>
+<table><tr><td><font size="4" color="#FF00FF">6. </font></td><td bgcolor="#F2FFF2" width="100%">De acuerdo a las reglas para responder expresiones aritméticas primero se deben resolver las que se encuentran dentro de paréntesis.</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>a) </td><td><input type="radio" name="resp6"></td><td>Falso</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>b) </td><td><input type="radio" name="resp6"></td><td>Verdadero</td></tr></table>
+<table><tr><td><font size="4" color="#FF00FF">7. </font></td><td bgcolor="#F2FFF2" width="100%">Suma y resta son operadores:</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>a) </td><td><input type="radio" name="resp7"></td><td>Lógicos</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>b) </td><td><input type="radio" name="resp7"></td><td>Relacionales </td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>c) </td><td><input type="radio" name="resp7"></td><td>Aritméticos</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>d) </td><td><input type="radio" name="resp7"></td><td>Ninguna de las anteriores</td></tr></table>
+<table><tr><td><font size="4" color="#FF00FF">8. </font></td><td bgcolor="#F2FFF2" width="100%">Es lo que resta de la división de x/y.</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>a) </td><td><input type="radio" name="resp8"></td><td>Residuo</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>b) </td><td><input type="radio" name="resp8"></td><td>División entera</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>c) </td><td><input type="radio" name="resp8"></td><td>Adición</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>d) </td><td><input type="radio" name="resp8"></td><td>Ninguna de las anteriores</td></tr></table>
+<table><tr><td><font size="4" color="#FF00FF">9. </font></td><td bgcolor="#F2FFF2" width="100%">Son operadores que se usan para comparar dos valores. </td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>a) </td><td><input type="radio" name="resp9"></td><td>Lógicos</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>b) </td><td><input type="radio" name="resp9"></td><td>Relacionales </td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>c) </td><td><input type="radio" name="resp9"></td><td>Aritméticos
+</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>d) </td><td><input type="radio" name="resp9"></td><td>Ninguna de las anteriores</td></tr></table>
+<table><tr><td><font size="4" color="#FF00FF">10. </font></td><td bgcolor="#F2FFF2" width="100%">Operador lógico también llamado disyunción:</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>a) </td><td><input type="radio" name="resp10"></td><td>AND</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>b) </td><td><input type="radio" name="resp10"></td><td>OR </td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>c) </td><td><input type="radio" name="resp10"></td><td>NOT
+</td></tr></table>
+<table><tr><td width="25">&nbsp;</td><td>d) </td><td><input type="radio" name="resp10"></td><td>Ninguna de las anteriores</td></tr></table>
+</td></tr>
+<tr><td align="center" height="50"><input type="hidden" value="badbcbcabb" name="tras">
+<input type="button" value="Puntuación" name="resultados" onClick="corrixe()" style="background-color: #FFCC66">
+<input type="reset" value="Limpiar" name="limpar" style="background-color: #FFCC66"></td></tr>
+</td></tr></table></form>
+</body>
+</html>
